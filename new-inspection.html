@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>New Inspection | HSSEU-PID</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7f6;
+            color: #333;
+        }
+
+        header {
+            background: white;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            border-bottom: 3px solid #0b6b4f;
+        }
+
+        header img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            margin-right: 18px;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #0b6b4f;
+            font-size: 27px;
+        }
+
+        header p {
+            margin: 4px 0;
+            color: #555;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            color: #0b6b4f;
+            margin-bottom: 25px;
+        }
+
+        .form-section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .form-section h2 {
+            color: #0b6b4f;
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .field.full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 10px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .buttons {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        button {
+            padding: 13px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .save-btn {
+            background: #0b6b4f;
+            color: white;
+        }
+
+        .back-btn {
+            background: #777;
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            background: #0b6b4f;
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .field.full {
+                grid-column: auto;
+            }
+
+            header {
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <img src="PNG%20LOGO.png" alt="HSSEU Logo">
+
+    <div>
+        <h1>HSSEU-PID</h1>
+        <p>Hydraulic Structure Safety Evaluation Unit</p>
+        <p>Punjab Irrigation Department, Government of the Punjab</p>
+    </div>
+
+</header>
+
+
+<div class="container">
+
+    <h1 class="page-title">New Inspection Record</h1>
+
+
+    <!-- BASIC INFORMATION -->
+
+    <div class="form-section">
+
+        <h2>1. Basic Information</h2>
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label>Structure Name</label>
+                <input type="text" name="structure_name">
+            </div>
+
+            <div class="field">
+                <label>Structure Type</label>
+
+                <select name="structure_type">
+                    <option value="">Select Structure Type</option>
+                    <option>Barrage</option>
+                    <option>Flood Protection Bund</option>
+                    <option>Flood Protection Wall</option>
+                    <option>Guide Bund</option>
+                    <option>Embankment</option>
+                    <option>Drain</option>
+                    <option>Canal</option>
+                    <option>Small Dam</option>
+                    <option>Other</option>
+                </select>
+
+            </div>
+
+            <div class="field">
+                <label>Zone</label>
+                <input type="text" name="zone">
+            </div>
+
+            <div class="field">
+                <label>Division</label>
+                <input type="text" name="division">
+            </div>
+
+            <div class="field">
+                <label>District</label>
+                <input type="text" name="district">
+            </div>
+
+            <div class="field">
+                <label>Inspection Date</label>
+                <input type="date" name="inspection_date">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- INSPECTION DETAILS -->
+
+    <div class="form-section">
+
+        <h2>2. Inspection Details</h2>
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label>Inspection Type</label>
+
+                <select name="inspection_type">
+                    <option value="">Select Inspection Type</option>
+                    <option>Pre-Flood Inspection</option>
+                    <option>Post-Flood Inspection</option>
+                    <option>Periodic Inspection</option>
+                    <option>Special Inspection</option>
+                    <option>Follow-up Inspection</option>
+                </select>
+
+            </div>
+
+            <div class="field">
+                <label>Inspection Team</label>
+                <input type="text" name="inspection_team">
+            </div>
+
+            <div class="field">
+                <label>Latitude</label>
+                <input type="text" name="latitude">
+            </div>
+
+            <div class="field">
+                <label>Longitude</label>
+                <input type="text" name="longitude">
+            </div>
+
+            <div class="field full">
+                <label>Location / Site Description</label>
+                <textarea name="location"></textarea>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TECHNICAL ASSESSMENT -->
+
+    <div class="form-section">
+
+        <h2>3. Technical Assessment</h2>
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label>Structural Condition</label>
+
+                <select name="structural_condition">
+                    <option value="">Select Condition</option>
+                    <option>Satisfactory</option>
+                    <option>Needs Attention</option>
+                    <option>Deficient</option>
+                    <option>Critical</option>
+                </select>
+
+            </div>
+
+            <div class="field">
+                <label>Hydraulic Condition</label>
+
+                <select name="hydraulic_condition">
+                    <option value="">Select Condition</option>
+                    <option>Satisfactory</option>
+                    <option>Needs Attention</option>
+                    <option>Deficient</option>
+                    <option>Critical</option>
+                </select>
+
+            </div>
+
+            <div class="field">
+                <label>Seepage Condition</label>
+
+                <select name="seepage">
+                    <option value="">Select Condition</option>
+                    <option>None</option>
+                    <option>Minor</option>
+                    <option>Moderate</option>
+                    <option>Severe</option>
+                </select>
+
+            </div>
+
+            <div class="field">
+                <label>Scouring / Erosion</label>
+
+                <select name="erosion">
+                    <option value="">Select Condition</option>
+                    <option>None</option>
+                    <option>Minor</option>
+                    <option>Moderate</option>
+                    <option>Severe</option>
+                </select>
+
+            </div>
+
+            <div class="field full">
+                <label>Inspection Observations</label>
+                <textarea name="observations"></textarea>
+            </div>
+
+            <div class="field full">
+                <label>Deficiencies / Defects Identified</label>
+                <textarea name="deficiencies"></textarea>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RECOMMENDATIONS -->
+
+    <div class="form-section">
+
+        <h2>4. Recommendations & Rectification</h2>
+
+        <div class="form-grid">
+
+            <div class="field full">
+                <label>Recommended Measures</label>
+                <textarea name="recommendations"></textarea>
+            </div>
+
+            <div class="field">
+                <label>Rectification Status</label>
+
+                <select name="rectification_status">
+                    <option value="">Select Status</option>
+                    <option>Not Required</option>
+                    <option>Required</option>
+                    <option>In Progress</option>
+                    <option>Completed</option>
+                    <option>Verified</option>
+                </select>
+
+            </div>
+
+            <div class="field">
+                <label>Follow-up Date</label>
+                <input type="date" name="followup_date">
+            </div>
+
+            <div class="field full">
+                <label>Remarks</label>
+                <textarea name="remarks"></textarea>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PHOTOS -->
+
+    <div class="form-section">
+
+        <h2>5. Photographs & Documents</h2>
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label>Inspection Photographs</label>
+                <input type="file" accept="image/*" multiple>
+            </div>
+
+            <div class="field">
+                <label>Inspection Report / PDF</label>
+                <input type="file" accept=".pdf">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button class="save-btn" type="button"
+            onclick="alert('Inspection form prepared. Database connection will be added in the next step.')">
+            Save Inspection
+        </button>
+
+        <button class="back-btn" type="button"
+            onclick="window.location.href='index.html'">
+            Back to Home
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+    HSSEU-PID | Punjab Irrigation Department
+</footer>
+
+
+</body>
+</html>
